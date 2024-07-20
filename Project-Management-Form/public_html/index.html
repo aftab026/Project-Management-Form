@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project Management Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header text-center">
+            <h2>Project Management Form</h2>
+        </div>
+
+        <form id="proForm" method="post">
+            <div class="form-group">
+                <label for="proid">Project-ID :</label>
+                <input type="text" id="proid" class="form-control" onchange="getEmp()">
+            </div>
+            <div class="form-group">
+                <label for="proname">Project-Name :</label>
+                <input type="text" id="proname" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label for="proto">Assigned-To :</label>
+                <input type="text" id="proto" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label for="prodate">Assignment-Date :</label>
+                <input type="date" id="prodate" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label for="prodeadline">Deadline :</label>
+                <input type="date" id="prodeadline" class="form-control" disabled>
+            </div>
+            <div class="form-group text-center">
+                <button type="button" class="btn btn-primary" id="save" onclick="saveData()" disabled>Save</button>
+                <button type="button" class="btn btn-primary" id="update" onclick="updateData()" disabled>Update</button>
+                <button type="button" class="btn btn-primary" id="reset" onclick="resetForm()" disabled>Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
